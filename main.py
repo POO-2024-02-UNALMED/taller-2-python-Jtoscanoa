@@ -1,5 +1,26 @@
-from Asiento import Asiento
-from Motor import Motor
+class Asiento():
+    def init(self, color, precio, registro):
+        self.color = color
+        self.precio = precio
+        self.registro = registro
+
+    def cambiarColor(self, ncolor: str):
+        colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
+        if ncolor in colores:
+            self.color = ncolor
+            return True
+        else:
+            return False
+class Motor():
+    def init(self, numeroCilindros, tipo, registro):
+        self.numeroCilindros = numeroCilindros
+        self.tipo = tipo
+        self.registro = registro
+    def cambiarRegistro(self, nregistro: int):
+        self.registro = nregistro
+    def asignarTipo(self, ntipo: str):
+        if ntipo == "electrico" or ntipo == "electrico":
+            self.tipo = ntipo
 if __name__ == "__main__":
     class Auto():
         cantidadCreados = 0
